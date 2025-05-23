@@ -3,1483 +3,629 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI CRYPTO INTEL</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Happy Birthday Kartika! 🎂</title>
     <style>
-        :root {
-            --primary-color: #00f7ff;
-            --secondary-color: #7a04eb;
-            --accent-color: #ff00c3;
-            --bg-color: #070b17;
-            --card-color: #0e1b33;
-            --bullish-color: #00ff88;
-            --bearish-color: #ff3366;
-            --neutral-color: #ffae00;
-            --good-news-color: #00ca72;
-            --bad-news-color: #ff4a5e;
-            --glow: 0 0 15px rgba(0, 247, 255, 0.7);
-            --text-shadow: 0 0 5px rgba(0, 247, 255, 0.7);
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap');
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
-            background-color: var(--bg-color);
-            color: white;
-            line-height: 1.6;
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(122, 4, 235, 0.1) 0%, transparent 30%),
-                radial-gradient(circle at 90% 80%, rgba(0, 247, 255, 0.1) 0%, transparent 30%),
-                radial-gradient(circle at 50% 50%, rgba(255, 0, 195, 0.05) 0%, transparent 60%);
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 12px;
-        }
-        
-        /* Header & Logo */
-        .header {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, var(--card-color) 0%, rgba(14, 27, 51, 0.8) 100%);
-            border-radius: 16px;
-            padding: 16px 20px;
-            box-shadow: var(--glow), 0 10px 20px rgba(0,0,0,0.2);
-            border: 1px solid rgba(0, 247, 255, 0.3);
-            position: relative;
+            justify-content: center;
             overflow: hidden;
-            backdrop-filter: blur(5px);
+            position: relative;
         }
-        
-        .header::before {
-            content: '';
+
+        /* Floating Bubbles Background */
+        .bubble {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(0, 247, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(122, 4, 235, 0.1) 0%, transparent 50%);
-            z-index: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            animation: float 8s infinite ease-in-out;
         }
-        
-        .header::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -150%;
-            width: 150%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.2), transparent);
-            animation: shine 5s infinite;
-            z-index: 1;
-        }
-        
-        @keyframes shine {
-            0% { left: -150%; }
-            20% { left: 100%; }
-            100% { left: 100%; }
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            z-index: 2;
-        }
-        
-        .logo-icon {
-            font-size: 32px;
-            margin-right: 12px;
-            color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(0, 247, 255, 0.9);
-            animation: pulse 2s ease-in-out infinite, float 3s ease-in-out infinite;
-        }
-        
+
         @keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-5px) rotate(5deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
+            0%, 100% {
+                transform: translateY(100vh) scale(0);
+            }
+            50% {
+                transform: translateY(-100vh) scale(1);
+            }
         }
-        
-        .logo-text {
-            font-weight: bold;
-            font-size: 22px;
-            letter-spacing: 1px;
-        }
-        
-        .logo-text span {
-            color: var(--primary-color);
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-        }
-        
-        .user-brand {
-            font-size: 14px;
-            z-index: 1;
-            background-color: rgba(7, 11, 23, 0.8);
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid var(--accent-color);
-            box-shadow: 0 0 10px rgba(255, 0, 195, 0.4);
-            animation: glow 4s ease-in-out infinite;
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-        }
-        
-        @keyframes glow {
-            0% { box-shadow: 0 0 10px rgba(255, 0, 195, 0.4); }
-            50% { box-shadow: 0 0 20px rgba(255, 0, 195, 0.7); }
-            100% { box-shadow: 0 0 10px rgba(255, 0, 195, 0.4); }
-        }
-        
-        .user-brand i {
-            margin-right: 5px;
-            color: var(--accent-color);
-        }
-        
-        /* Market Status */
-        .market-status {
-            background: linear-gradient(135deg, var(--card-color) 0%, rgba(14, 27, 51, 0.9) 100%);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-            border: 1px solid rgba(122, 4, 235, 0.3);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(5px);
-        }
-        
-        .market-status::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(122, 4, 235, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(0, 247, 255, 0.1) 0%, transparent 40%);
-            z-index: 0;
-        }
-        
-        .market-info {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .market-status-title {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #8c9cb8;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        
-        .btc-price {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 4px;
-            background: linear-gradient(to right, #ffffff, var(--primary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
-        }
-        
-        .btc-change {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-        }
-        
-        .btc-change i {
-            margin-right: 6px;
-        }
-        
-        .bullish {
-            color: var(--bullish-color);
-            text-shadow: 0 0 10px rgba(0, 255, 136, 0.6);
-        }
-        
-        .bearish {
-            color: var(--bearish-color);
-            text-shadow: 0 0 10px rgba(255, 51, 102, 0.6);
-        }
-        
-        .neutral {
-            color: var(--neutral-color);
-            text-shadow: 0 0 10px rgba(255, 174, 0, 0.6);
-        }
-        
-        .market-gauge {
-            background: conic-gradient(from 0deg at 50% 50%, 
-                rgba(255, 51, 102, 0.2) 0%, 
-                rgba(255, 174, 0, 0.2) 120deg, 
-                rgba(0, 255, 136, 0.2) 240deg, 
-                rgba(255, 51, 102, 0.2) 360deg);
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 247, 255, 0.3);
-            border: 3px solid rgba(0, 247, 255, 0.3);
-            animation: rotate 10s linear infinite;
-            z-index: 1;
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .gauge-inner {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background-color: rgba(7, 11, 23, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
-            animation: counter-rotate 10s linear infinite;
-        }
-        
-        @keyframes counter-rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(-360deg); }
-        }
-        
-        .gauge-label {
-            font-size: 16px;
-            font-weight: bold;
+
+        /* Main Container */
+        .birthday-container {
             text-align: center;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-            letter-spacing: 1px;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            animation: bounce-in 1s ease-out;
         }
-        
-        /* Nav Tabs */
-        .nav-tabs {
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Cute Characters */
+        .characters {
+            margin: 20px 0;
             display: flex;
-            background: linear-gradient(135deg, var(--card-color) 0%, rgba(14, 27, 51, 0.9) 100%);
-            border-radius: 16px;
-            overflow: hidden;
-            margin-bottom: 20px;
-            border: 1px solid rgba(122, 4, 235, 0.3);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            position: relative;
+            justify-content: center;
+            gap: 20px;
         }
-        
-        .nav-tabs::before {
+
+        .character {
+            width: 120px;
+            height: 120px;
+            background: #ffd1dc;
+            border-radius: 50%;
+            position: relative;
+            animation: wobble 2s ease-in-out infinite;
+        }
+
+        .character:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        @keyframes wobble {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* Character Features */
+        .character::before,
+        .character::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(0, 247, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(122, 4, 235, 0.05) 0%, transparent 50%);
-            z-index: 0;
+            width: 10px;
+            height: 10px;
+            background: #333;
+            border-radius: 50%;
+            top: 40px;
         }
-        
-        .nav-tab {
-            flex: 1;
-            text-align: center;
-            padding: 14px;
-            cursor: pointer;
-            color: white;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-            text-transform: uppercase;
-            font-size: 14px;
+
+        .character::before {
+            left: 35px;
         }
-        
-        .nav-tab i {
-            margin-right: 6px;
-            font-size: 16px;
+
+        .character::after {
+            right: 35px;
         }
-        
-        .nav-tab::before {
-            content: '';
+
+        /* Character Smile */
+        .smile {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-            transition: all 0.3s ease;
-            z-index: 1;
-        }
-        
-        .nav-tab.active {
-            color: var(--primary-color);
-            background: linear-gradient(to bottom, rgba(0, 247, 255, 0.1), transparent);
-        }
-        
-        .nav-tab.active::before {
-            width: 100%;
-            box-shadow: var(--glow);
-        }
-        
-        /* Content Sections */
-        .content-section {
-            display: none;
-        }
-        
-        .content-section.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* News Items */
-        .news-container {
-            margin-bottom: 20px;
-        }
-        
-        .news-filter {
-            display: flex;
-            overflow-x: auto;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            scrollbar-width: none;
-            position: relative;
-        }
-        
-        .news-filter::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .news-filter::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: 0;
-            height: 100%;
             width: 30px;
-            background: linear-gradient(to right, transparent, var(--bg-color));
-            pointer-events: none;
-        }
-        
-        .filter-button {
-            background: linear-gradient(135deg, rgba(14, 27, 51, 0.9) 0%, rgba(14, 27, 51, 0.7) 100%);
-            border: 1px solid rgba(0, 247, 255, 0.2);
-            color: white;
-            border-radius: 20px;
-            padding: 8px 16px;
-            margin-right: 10px;
-            white-space: nowrap;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            display: flex;
-            align-items: center;
-        }
-        
-        .filter-button i {
-            margin-right: 5px;
-            font-size: 14px;
-        }
-        
-        .filter-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-            background: linear-gradient(135deg, rgba(122, 4, 235, 0.3) 0%, rgba(14, 27, 51, 0.7) 100%);
-        }
-        
-        .filter-button.active {
-            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-            color: white;
-            box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
-            border: 1px solid var(--primary-color);
-        }
-        
-        .news-item {
-            background: linear-gradient(135deg, var(--card-color) 0%, rgba(14, 27, 51, 0.9) 100%);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 15px;
-            position: relative;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border: 1px solid rgba(122, 4, 235, 0.2);
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-        
-        .news-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(122, 4, 235, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(0, 247, 255, 0.05) 0%, transparent 40%);
-            z-index: 0;
-        }
-        
-        .news-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15), 0 0 15px rgba(0, 247, 255, 0.2);
-            border: 1px solid rgba(0, 247, 255, 0.3);
-        }
-        
-        .news-sentiment {
-            position: absolute;
-            top: -8px;
-            right: 20px;
-            padding: 5px 10px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-            z-index: 2;
-        }
-        
-        .good-news {
-            background: linear-gradient(to right, var(--good-news-color), #00ffa3);
-            color: #003b21;
-        }
-        
-        .bad-news {
-            background: linear-gradient(to right, var(--bad-news-color), #ff85a5);
-            color: #3d0011;
-        }
-        
-        .news-title {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: white;
-            position: relative;
-            z-index: 1;
-            line-height: 1.4;
-        }
-        
-        .news-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-            font-size: 13px;
-            color: #a3b5d0;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .news-source {
-            display: flex;
-            align-items: center;
-        }
-        
-        .news-source i {
-            margin-right: 6px;
-            color: var(--primary-color);
-        }
-        
-        .news-date {
-            display: flex;
-            align-items: center;
-        }
-        
-        .news-date i {
-            margin-right: 6px;
-            color: var(--primary-color);
-        }
-        
-        .news-summary {
-            font-size: 14px;
-            color: #d0d7e2;
-            margin-bottom: 15px;
-            position: relative;
-            z-index: 1;
-            line-height: 1.6;
-        }
-        
-        .news-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .news-tag {
-            background: rgba(122, 4, 235, 0.15);
-            color: var(--primary-color);
-            border-radius: 12px;
-            padding: 4px 10px;
-            font-size: 11px;
-            letter-spacing: 0.5px;
-            border: 1px solid rgba(0, 247, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .news-tag:hover {
-            background: rgba(0, 247, 255, 0.15);
-            transform: translateY(-2px);
-        }
-        
-        /* Economic Calendar */
-        .calendar-item {
-            background: linear-gradient(135deg, var(--card-color) 0%, rgba(14, 27, 51, 0.9) 100%);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 15px;
-            position: relative;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            border: 1px solid rgba(122, 4, 235, 0.2);
-            transition: all 0.3s ease;
-            display: flex;
-            overflow: hidden;
-        }
-        
-        .calendar-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(122, 4, 235, 0.1) 0%, transparent 40%),
-                radial-gradient(circle at 80% 80%, rgba(0, 247, 255, 0.05) 0%, transparent 40%);
-            z-index: 0;
-        }
-        
-        .calendar-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15), 0 0 15px rgba(0, 247, 255, 0.2);
-            border: 1px solid rgba(0, 247, 255, 0.3);
-        }
-        
-        .calendar-date {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-width: 70px;
-            border-right: 1px solid rgba(0, 247, 255, 0.2);
-            padding-right: 15px;
-            margin-right: 15px;
-            font-size: 12px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .calendar-day {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-shadow: 0 0 10px rgba(0, 247, 255, 0.4);
-        }
-        
-        .calendar-month {
-            color: #8c9cb8;
-            letter-spacing: 1px;
-            font-weight: bold;
-        }
-        
-        .calendar-content {
-            flex: 1;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .calendar-title {
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 8px;
-            color: white;
-        }
-        
-        .calendar-details {
-            font-size: 13px;
-            color: #a3b5d0;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-        
-        .calendar-details i {
-            margin-right: 6px;
-            color: var(--primary-color);
-        }
-        
-        .calendar-importance {
-            margin-left: 15px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .importance-indicator {
-            display: flex;
-            margin-left: 6px;
-        }
-        
-        .importance-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 3px;
-            background-color: rgba(255, 255, 255, 0.15);
-            box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
-        }
-        
-        .importance-dot.active {
-            background-color: var(--primary-color);
-            box-shadow: 0 0 5px var(--primary-color);
-        }
-        
-        .high-importance .importance-dot.active {
-            background-color: var(--bullish-color);
-            box-shadow: 0 0 5px var(--bullish-color);
-        }
-        
-        .calendar-impact {
-            background: rgba(14, 27, 51, 0.6);
-            border: 1px solid rgba(0, 247, 255, 0.2);
-            border-radius: 12px;
-            padding: 10px 15px;
-            font-size: 13px;
-            color: #d0d7e2;
-            line-height: 1.6;
-            margin-top: 5px;
-            position: relative;
-        }
-        
-        .calendar-impact::before {
-            content: 'Analisis Impact';
-            position: absolute;
-            top: -10px;
-            left: 15px;
-            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-            padding: 2px 10px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: bold;
-            color: white;
-            letter-spacing: 0.5px;
-        }
-        
-        .calendar-impact .impact-positive {
-            color: var(--bullish-color);
-            font-weight: bold;
-        }
-        
-        .calendar-impact .impact-negative {
-            color: var(--bearish-color);
-            font-weight: bold;
-        }
-        
-        /* Loading and Errors */
-        .loading {
-            text-align: center;
-            padding: 30px;
-            color: var(--primary-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .loading i {
-            font-size: 30px;
-            animation: spin 1.5s linear infinite;
-        }
-        
-        .loading-text {
-            font-size: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-weight: bold;
-            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .error-message {
-            background: linear-gradient(135deg, rgba(255, 51, 102, 0.2) 0%, rgba(255, 51, 102, 0.1) 100%);
-            border: 1px solid var(--bearish-color);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .error-message::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(255, 51, 102, 0.2) 0%, transparent 70%);
-            z-index: 0;
-        }
-        
-        .error-message i {
-            color: var(--bearish-color);
-            margin-right: 8px;
-            font-size: 18px;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Neon Animation Effects */
-        .pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-        
-        @keyframes pulse {
-            0% { opacity: 1; text-shadow: 0 0 10px rgba(0, 247, 255, 0.7); }
-            50% { opacity: 0.7; text-shadow: 0 0 20px rgba(0, 247, 255, 0.9); }
-            100% { opacity: 1; text-shadow: 0 0 10px rgba(0, 247, 255, 0.7); }
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #8c9cb8;
-            margin-top: 30px;
-            letter-spacing: 0.5px;
-            position: relative;
-        }
-        
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
+            height: 15px;
+            border-bottom: 3px solid #333;
+            border-radius: 0 0 30px 30px;
+            bottom: 35px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
         }
-        
-        .footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
+
+        /* Party Hat */
+        .hat {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 40px solid #9b59b6;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: hat-dance 1s ease-in-out infinite alternate;
         }
-        
-        .footer a:hover {
-            text-shadow: 0 0 8px var(--primary-color);
+
+        @keyframes hat-dance {
+            0% {
+                transform: translateX(-50%) rotate(-10deg);
+            }
+            100% {
+                transform: translateX(-50%) rotate(10deg);
+            }
         }
-        
-        /* Debug Panel */
-        .debug-panel {
-            background-color: rgba(0, 0, 0, 0.85);
-            position: fixed;
-            bottom: 0;
+
+        /* Birthday Cake */
+        .cake {
+            width: 150px;
+            height: 100px;
+            background: #f8b500;
+            margin: 30px auto;
+            position: relative;
+            border-radius: 10px;
+            animation: cake-appear 1s ease-out 0.5s both;
+        }
+
+        @keyframes cake-appear {
+            from {
+                transform: scale(0) rotate(180deg);
+            }
+            to {
+                transform: scale(1) rotate(0deg);
+            }
+        }
+
+        .cake::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 30px;
+            background: #d63031;
+            top: -20px;
             left: 0;
-            right: 0;
-            padding: 10px;
-            font-size: 11px;
-            color: #00ff88;
-            max-height: 100px;
-            overflow-y: auto;
-            z-index: 999;
-            border-top: 1px solid var(--primary-color);
-            font-family: monospace;
+            border-radius: 50% 50% 10px 10px;
         }
-        
-        /* Particle Effects */
-        .particles {
+
+        /* Candles */
+        .candle {
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background: #e17055;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .flame {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, #ffa502 0%, #ff6348 70%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            top: -15px;
+            left: -5px;
+            animation: flicker 0.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% {
+                transform: scale(1) rotate(-2deg);
+            }
+            100% {
+                transform: scale(1.1) rotate(2deg);
+            }
+        }
+
+        /* Text Styles */
+        h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5rem;
+            color: #e17055;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0 #f8b500;
+            animation: rainbow 3s ease-in-out infinite;
+        }
+
+        @keyframes rainbow {
+            0%, 100% {
+                color: #e17055;
+            }
+            25% {
+                color: #74b9ff;
+            }
+            50% {
+                color: #a29bfe;
+            }
+            75% {
+                color: #fd79a8;
+            }
+        }
+
+        .name {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #6c5ce7;
+            margin: 20px 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .message {
+            font-size: 1.5rem;
+            color: #2d3436;
+            margin: 20px 0;
+        }
+
+        /* Music Button */
+        .music-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #ff6b9d;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(255, 107, 157, 0.4);
+            animation: music-pulse 2s ease-in-out infinite;
+            z-index: 100;
+            font-size: 2rem;
+        }
+
+        @keyframes music-pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 5px 20px rgba(255, 107, 157, 0.4);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 5px 30px rgba(255, 107, 157, 0.6);
+            }
+        }
+
+        /* Surprise Button */
+        .surprise-btn {
+            padding: 15px 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: all 0.3s;
+            animation: btn-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes btn-glow {
+            0%, 100% {
+                box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            }
+            50% {
+                box-shadow: 0 5px 30px rgba(102, 126, 234, 0.8);
+            }
+        }
+
+        .surprise-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Hearts Rain */
+        .heart {
+            position: absolute;
+            color: #ff6b9d;
+            font-size: 2rem;
+            animation: fall 5s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        /* Stars */
+        .star {
+            position: absolute;
+            color: #feca57;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;
-            pointer-events: none;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
         }
-        
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            opacity: 0.6;
-            box-shadow: 0 0 10px var(--primary-color);
-            animation: float-particle 15s linear infinite;
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        @keyframes float-particle {
-            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.6; }
-            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            animation: modal-bounce 0.5s ease-out;
+        }
+
+        @keyframes modal-bounce {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="particles" id="particles"></div>
-    <div class="container">
-        <!-- Header & Logo -->
-        <div class="header">
-            <div class="logo">
-                <i class="fas fa-robot logo-icon pulse"></i>
-                <div class="logo-text">AI <span>CRYPTO</span> INTEL</div>
-            </div>
-            <div class="user-brand"><i class="fas fa-microchip"></i> by AL HAFIS</div>
-        </div>
+    <!-- Music Button -->
+    <button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+    <!-- Birthday Container -->
+    <div class="birthday-container">
+        <h1>Happy Birthday!</h1>
         
-        <!-- Market Status -->
-        <div class="market-status">
-            <div class="market-info">
-                <div class="market-status-title">Bitcoin Status</div>
-                <div class="btc-price">$67,214.58</div>
-                <div class="btc-change bullish">
-                    <i class="fas fa-arrow-up"></i> +1.24%
-                </div>
+        <!-- Cute Characters -->
+        <div class="characters">
+            <div class="character">
+                <div class="hat"></div>
+                <div class="smile"></div>
             </div>
-            <div class="market-gauge">
-                <div class="gauge-inner">
-                    <div class="gauge-label bullish">BULLISH</div>
-                </div>
+            <div class="character" style="background: #c7ecee;">
+                <div class="hat" style="border-bottom-color: #ff6b9d;"></div>
+                <div class="smile"></div>
             </div>
         </div>
-        
-        <!-- Navigation Tabs -->
-        <div class="nav-tabs">
-            <div class="nav-tab active" data-tab="news">
-                <i class="fas fa-newspaper"></i> News
-            </div>
-            <div class="nav-tab" data-tab="calendar">
-                <i class="fas fa-calendar-alt"></i> Calendar
+
+        <!-- Birthday Cake -->
+        <div class="cake">
+            <div class="candle">
+                <div class="flame"></div>
             </div>
         </div>
+
+        <div class="name">KARTIKA</div>
+        <p class="message">✨ Selamat Ulang Tahun Sayang! ✨</p>
+        <p class="message">💕 From Hafis with Love 💕</p>
         
-        <!-- News Section -->
-        <div class="content-section active" id="news-section">
-            <div class="news-filter">
-                <button class="filter-button active" data-filter="all"><i class="fas fa-th-list"></i> Semua</button>
-                <button class="filter-button" data-filter="fed"><i class="fas fa-university"></i> The Fed</button>
-                <button class="filter-button" data-filter="regulation"><i class="fas fa-gavel"></i> Regulasi</button>
-                <button class="filter-button" data-filter="macro"><i class="fas fa-chart-line"></i> Ekonomi Makro</button>
-                <button class="filter-button" data-filter="adoption"><i class="fas fa-shopping-cart"></i> Adopsi</button>
-                <button class="filter-button" data-filter="defi"><i class="fas fa-wallet"></i> DeFi</button>
-                <button class="filter-button" data-filter="good"><i class="fas fa-smile"></i> Good News</button>
-                <button class="filter-button" data-filter="bad"><i class="fas fa-frown"></i> Bad News</button>
-            </div>
-            
-            <div class="news-container" id="news-container">
-                <!-- News items will be inserted here -->
-            </div>
-        </div>
-        
-        <!-- Calendar Section -->
-        <div class="content-section" id="calendar-section">
-            <div class="calendar-container" id="calendar-container">
-                <!-- Calendar items will be inserted here -->
-            </div>
-        </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <p>Data provided by CryptoIntel 2025 © AL HAFIS</p>
+        <button class="surprise-btn" onclick="showSurprise()">
+            🎁 Buka Kejutan! 🎁
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2 style="color: #e17055; font-family: 'Pacifico', cursive; font-size: 2.5rem;">Untuk Kartika Tersayang 💖</h2>
+            <p style="font-size: 1.3rem; line-height: 2; margin: 20px 0;">
+                Di hari istimewamu ini,<br>
+                Kukirimkan doa terbaik untukmu<br>
+                Semoga kebahagiaanmu berlimpah<br>
+                Dan mimpi-mimpimu menjadi nyata<br><br>
+                <strong style="color: #6c5ce7; font-size: 1.5rem;">Love Always, Hafis 💕</strong>
+            </p>
+            <button class="surprise-btn" onclick="closeModal()" style="margin-top: 20px;">
+                Tutup 💕
+            </button>
         </div>
     </div>
-    
-    <!-- Debug Panel (Hidden by default) -->
-    <div class="debug-panel" id="debug-panel"></div>
-    
+
+    <!-- Hidden Audio -->
+    <audio id="birthdaySong" loop>
+        <source src="data:audio/mpeg;base64,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QJA0iABQMiRoABJFQMjQMiQMjQBJFIJIAE0AACQIgACJAkABECokDIABNAEAAJoAkAAf8AAJ//sQAP/wACAAD/8AAAAIAAAP/wAAAD/H//5P//x///Kf///5P/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//sQAP/wACAAD/8AAAAIAAAP/wAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
     <script>
-        // Debug functionality
-        const DEBUG = true;
-        
-        function debug(message) {
-            if (DEBUG) {
-                const panel = document.getElementById('debug-panel');
-                if (panel) {
-                    panel.style.display = 'block';
-                    const time = new Date().toLocaleTimeString();
-                    panel.innerHTML += `<div>[${time}] ${message}</div>`;
-                    panel.scrollTop = panel.scrollHeight;
+        let musicPlaying = false;
+        let synth;
+        let pattern;
+
+        // Happy Birthday melody notes and timing
+        const happyBirthdayNotes = [
+            { note: 'C4', duration: '8n', time: 0 },
+            { note: 'C4', duration: '8n', time: 0.25 },
+            { note: 'D4', duration: '4n', time: 0.5 },
+            { note: 'C4', duration: '4n', time: 1 },
+            { note: 'F4', duration: '4n', time: 1.5 },
+            { note: 'E4', duration: '2n', time: 2 },
+            
+            { note: 'C4', duration: '8n', time: 3 },
+            { note: 'C4', duration: '8n', time: 3.25 },
+            { note: 'D4', duration: '4n', time: 3.5 },
+            { note: 'C4', duration: '4n', time: 4 },
+            { note: 'G4', duration: '4n', time: 4.5 },
+            { note: 'F4', duration: '2n', time: 5 },
+            
+            { note: 'C4', duration: '8n', time: 6 },
+            { note: 'C4', duration: '8n', time: 6.25 },
+            { note: 'C5', duration: '4n', time: 6.5 },
+            { note: 'A4', duration: '4n', time: 7 },
+            { note: 'F4', duration: '4n', time: 7.5 },
+            { note: 'E4', duration: '4n', time: 8 },
+            { note: 'D4', duration: '2n', time: 8.5 },
+            
+            { note: 'Bb4', duration: '8n', time: 9.5 },
+            { note: 'Bb4', duration: '8n', time: 9.75 },
+            { note: 'A4', duration: '4n', time: 10 },
+            { note: 'F4', duration: '4n', time: 10.5 },
+            { note: 'G4', duration: '4n', time: 11 },
+            { note: 'F4', duration: '2n', time: 11.5 }
+        ];
+
+        // Initialize Tone.js
+        async function initMusic() {
+            await Tone.start();
+            
+            // Create a synth with a nice sound
+            synth = new Tone.PolySynth(Tone.Synth, {
+                oscillator: {
+                    type: 'triangle'
+                },
+                envelope: {
+                    attack: 0.005,
+                    decay: 0.1,
+                    sustain: 0.3,
+                    release: 1
                 }
-                console.log(`[DEBUG] ${message}`);
-            }
+            }).toDestination();
+            
+            // Add reverb for nicer sound
+            const reverb = new Tone.Reverb(1.5).toDestination();
+            synth.connect(reverb);
+            
+            // Set volume
+            synth.volume.value = -10;
         }
-        
-        // Initialize Telegram WebApp if available
-        let webApp = null;
-        try {
-            if (window.Telegram && window.Telegram.WebApp) {
-                webApp = window.Telegram.WebApp;
-                webApp.expand();
-                webApp.ready();
-                debug("Telegram WebApp initialized");
+
+        // Play Happy Birthday
+        function playHappyBirthday() {
+            const now = Tone.now();
+            happyBirthdayNotes.forEach(note => {
+                synth.triggerAttackRelease(note.note, note.duration, now + note.time);
+            });
+            
+            // Loop the song
+            setTimeout(() => {
+                if (musicPlaying) {
+                    playHappyBirthday();
+                }
+            }, 13000); // Song duration
+        }
+
+        // Toggle Music
+        async function toggleMusic() {
+            const musicBtn = document.querySelector('.music-btn');
+            
+            if (!synth) {
+                await initMusic();
+            }
+            
+            if (musicPlaying) {
+                Tone.Transport.stop();
+                musicBtn.innerHTML = '🎵';
+                musicPlaying = false;
             } else {
-                debug("Running in browser mode (Telegram WebApp not detected)");
-            }
-        } catch (error) {
-            debug(`Error initializing Telegram WebApp: ${error.message}`);
-        }
-        
-        // Create particle effects
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const particleCount = 15;
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                // Random position
-                const posX = Math.random() * 100;
-                const posY = Math.random() * 100;
-                
-                // Random size
-                const size = Math.random() * 3 + 1;
-                
-                // Random color variation
-                const colors = ['#00f7ff', '#7a04eb', '#ff00c3'];
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                
-                // Random animation duration and delay
-                const duration = Math.random() * 15 + 10;
-                const delay = Math.random() * 10;
-                
-                // Set styles
-                particle.style.left = `${posX}%`;
-                particle.style.bottom = `${-10}%`;
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.backgroundColor = color;
-                particle.style.boxShadow = `0 0 10px ${color}`;
-                particle.style.animation = `float-particle ${duration}s linear infinite ${delay}s`;
-                
-                particlesContainer.appendChild(particle);
+                playHappyBirthday();
+                musicBtn.innerHTML = '🔇';
+                musicPlaying = true;
             }
         }
-        
-        // Sample news data
-        const newsData = [
-            {
-                id: 1,
-                title: "The Fed Mempertahankan Suku Bunga, Bitcoin Melonjak 5%",
-                source: "CryptoNews",
-                date: "18 May 2025",
-                summary: "Federal Reserve AS memutuskan untuk mempertahankan suku bunga pada level saat ini. Jerome Powell menyatakan bahwa inflasi mulai terkendali. Pasar crypto bereaksi positif dengan Bitcoin naik 5% dalam 24 jam.",
-                sentiment: "good",
-                categories: ["fed", "macro", "bitcoin"]
-            },
-            {
-                id: 2,
-                title: "SEC Mengeluarkan Panduan Baru untuk Aset Crypto",
-                source: "Coindesk",
-                date: "16 May 2025",
-                summary: "Securities and Exchange Commission (SEC) telah menerbitkan panduan regulasi baru untuk aset kripto. Panduan ini memberikan kejelasan tentang klasifikasi token sebagai sekuritas.",
-                sentiment: "good",
-                categories: ["regulation", "sec"]
-            },
-            {
-                id: 3,
-                title: "Inflasi AS Turun ke 2.8%, Ethereum Rally",
-                source: "Bloomberg Crypto",
-                date: "14 May 2025",
-                summary: "Data inflasi AS terbaru menunjukkan penurunan ke level 2.8%, lebih rendah dari perkiraan ekonom. Ethereum merespons dengan kenaikan 7.2% karena pasar mengantisipasi kebijakan moneter yang lebih longgar.",
-                sentiment: "good",
-                categories: ["macro", "inflation", "ethereum"]
-            },
-            {
-                id: 4,
-                title: "Bank Sentral Eropa Membahas CBDC, XRP Terpengaruh Negatif",
-                source: "Cointelegraph",
-                date: "13 May 2025",
-                summary: "Bank Sentral Eropa mengadakan pertemuan untuk membahas kemajuan Euro Digital (CBDC). XRP mengalami penurunan 3% karena investor khawatir tentang kompetisi potensial dengan CBDC untuk sistem pembayaran lintas batas.",
-                sentiment: "bad",
-                categories: ["regulation", "cbdc", "xrp"]
-            },
-            {
-                id: 5,
-                title: "Protokol DeFi Baru Menarik $500 Juta TVL dalam 48 Jam",
-                source: "DeFi Pulse",
-                date: "12 May 2025",
-                summary: "Protokol DeFi baru bernama YieldMaximizer telah meluncur di jaringan Ethereum dan menarik lebih dari $500 juta dalam Total Value Locked hanya dalam 48 jam pertama.",
-                sentiment: "good",
-                categories: ["defi", "ethereum"]
-            },
-            {
-                id: 6,
-                title: "Walmart Mengintegrasikan Pembayaran Bitcoin di Semua Toko AS",
-                source: "CNBC Crypto",
-                date: "10 May 2025",
-                summary: "Raksasa ritel Walmart mengumumkan akan menerima pembayaran Bitcoin di semua toko di AS mulai bulan depan. Ini menandai adopsi crypto terbesar oleh retailer hingga saat ini.",
-                sentiment: "good",
-                categories: ["adoption", "bitcoin"]
-            },
-            {
-                id: 7,
-                title: "Data Ketenagakerjaan AS Lebih Lemah dari Perkiraan, Crypto Berfluktuasi",
-                source: "CryptoNews",
-                date: "9 May 2025",
-                summary: "Laporan ketenagakerjaan AS menunjukkan penambahan pekerjaan yang lebih rendah dari perkiraan. Pasar crypto menunjukkan volatilitas karena trader mengevaluasi dampaknya terhadap kebijakan The Fed.",
-                sentiment: "bad",
-                categories: ["fed", "macro", "employment"]
-            },
-            {
-                id: 8,
-                title: "China Memperketat Kembali Larangan Crypto Setelah Peningkatan Aktivitas Trading",
-                source: "South China Morning Post",
-                date: "8 May 2025",
-                summary: "Pemerintah China mengumumkan pengetatan larangan cryptocurrency setelah mendeteksi peningkatan aktivitas trading di wilayahnya. Bitcoin turun 2.5% sebagai respons terhadap berita ini.",
-                sentiment: "bad",
-                categories: ["regulation", "china"]
-            },
-            {
-                id: 9,
-                title: "The Fed Merilis Studi Positif tentang Dampak Stablecoin pada Sistem Keuangan",
-                source: "Federal Reserve",
-                date: "7 May 2025",
-                summary: "Federal Reserve menerbitkan studi komprehensif mengenai dampak stablecoin pada stabilitas sistem keuangan. Studi tersebut menyoroti banyak manfaat potensial dari adopsi stablecoin yang lebih luas.",
-                sentiment: "good",
-                categories: ["fed", "stablecoin", "regulation"]
-            },
-            {
-                id: 10,
-                title: "IMF Memperingatkan Negara Berkembang tentang Risiko Adopsi Crypto",
-                source: "IMF Blog",
-                date: "5 May 2025",
-                summary: "Dana Moneter Internasional (IMF) mengeluarkan peringatan kepada negara-negara berkembang tentang risiko sistemik dari adopsi cryptocurrency sebagai mata uang resmi tanpa kerangka regulasi yang memadai.",
-                sentiment: "bad",
-                categories: ["macro", "adoption", "regulation", "imf"]
-            }
-        ];
-        
-        // Sample economic calendar data
-        const calendarData = [
-            {
-                id: 1,
-                date: "20 May 2025",
-                day: "20",
-                month: "MAY",
-                title: "FOMC Meeting Minutes",
-                time: "21:00 WIB",
-                country: "US",
-                importance: "high",
-                impact: "Bitcoin biasanya bereaksi volatile terhadap rilis FOMC Minutes. <span class='impact-positive'>Bullish jika nada hawkish berkurang</span> dan <span class='impact-negative'>bearish jika The Fed masih agresif</span> dalam mengendalikan inflasi."
-            },
-            {
-                id: 2,
-                date: "21 May 2025",
-                day: "21",
-                month: "MAY",
-                title: "US CPI Data Release",
-                time: "20:30 WIB",
-                country: "US",
-                importance: "high",
-                impact: "Data inflasi sangat krusial untuk Bitcoin. <span class='impact-positive'>BTC biasanya akan rally jika CPI lebih rendah dari ekspektasi</span> karena ini akan memaksa The Fed untuk menurunkan suku bunga lebih cepat."
-            },
-            {
-                id: 3,
-                date: "22 May 2025",
-                day: "22",
-                month: "MAY",
-                title: "ECB Interest Rate Decision",
-                time: "19:45 WIB",
-                country: "EU",
-                importance: "high",
-                impact: "Keputusan suku bunga ECB memengaruhi pasar global. <span class='impact-positive'>Bitcoin cenderung bullish jika ECB lebih dovish</span> dari perkiraan, karena ini akan meningkatkan likuiditas global dan risk appetite."
-            },
-            {
-                id: 4,
-                date: "23 May 2025",
-                day: "23",
-                month: "MAY",
-                title: "US Jobless Claims",
-                time: "20:30 WIB",
-                country: "US",
-                importance: "medium",
-                impact: "Data ketenagakerjaan berdampak pada kebijakan moneter. <span class='impact-negative'>BTC bisa terkoreksi jika jobless claims sangat rendah</span> karena ini bisa mendorong The Fed untuk mempertahankan suku bunga tinggi lebih lama."
-            },
-            {
-                id: 5,
-                date: "24 May 2025",
-                day: "24",
-                month: "MAY",
-                title: "G7 Finance Ministers Meeting",
-                time: "All Day",
-                country: "Global",
-                importance: "medium",
-                impact: "Pertemuan Menteri Keuangan G7 bisa membahas regulasi crypto. <span class='impact-negative'>Pernyataan negatif tentang regulasi crypto dari G7 bisa menekan harga</span>, sementara <span class='impact-positive'>adopsi positif akan mendukung pasar</span>."
-            },
-            {
-                id: 6,
-                date: "26 May 2025",
-                day: "26",
-                month: "MAY",
-                title: "Bank of Japan Policy Statement",
-                time: "08:00 WIB",
-                country: "JP",
-                importance: "medium",
-                impact: "Kebijakan BOJ memengaruhi carry trade dan Yen. <span class='impact-positive'>Kenaikan suku bunga Jepang bisa positif untuk crypto</span> karena investasi Jepang yang selama ini di luar negeri akan kembali ke aset domestik termasuk crypto."
-            },
-            {
-                id: 7,
-                date: "27 May 2025",
-                day: "27",
-                month: "MAY",
-                title: "US Consumer Confidence Index",
-                time: "22:00 WIB",
-                country: "US",
-                importance: "medium",
-                impact: "Indeks keyakinan konsumen merefleksikan ekonomi riil. <span class='impact-positive'>Bitcoin cenderung naik jika data menunjukkan kepercayaan konsumen yang kuat</span> karena ini mendukung narasi ekonomi yang sehat."
-            },
-            {
-                id: 8,
-                date: "28 May 2025",
-                day: "28",
-                month: "MAY",
-                title: "US GDP (Q1 Final)",
-                time: "20:30 WIB",
-                country: "US",
-                importance: "high",
-                impact: "Data GDP final kuartal pertama sangat penting. <span class='impact-positive'>BTC akan merespon positif jika pertumbuhan kuat</span> tanpa peningkatan inflasi. <span class='impact-negative'>Tanda-tanda resesi bisa memicu penurunan</span> karena investor akan beralih ke aset safe haven."
-            }
-        ];
-        
-        // Render news items
-        function renderNews(filteredNews = newsData) {
-            debug(`Rendering ${filteredNews.length} news items`);
-            
-            const newsContainer = document.getElementById('news-container');
-            newsContainer.innerHTML = '';
-            
-            if (filteredNews.length === 0) {
-                newsContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner"></i><div class="loading-text">Tidak ada berita yang ditemukan</div></div>';
-                return;
-            }
-            
-            filteredNews.forEach(news => {
-                // Create tags HTML
-                let tagsHTML = '';
-                news.categories.forEach(category => {
-                    tagsHTML += `<span class="news-tag">${category}</span>`;
-                });
-                
-                // Create sentiment badge class
-                const sentimentClass = news.sentiment === 'good' ? 'good-news' : 'bad-news';
-                const sentimentText = news.sentiment === 'good' ? 'GOOD NEWS' : 'BAD NEWS';
-                
-                // Create news item HTML
-                const newsItem = document.createElement('div');
-                newsItem.className = 'news-item';
-                newsItem.innerHTML = `
-                    <div class="news-sentiment ${sentimentClass}">${sentimentText}</div>
-                    <div class="news-title">${news.title}</div>
-                    <div class="news-meta">
-                        <div class="news-source"><i class="fas fa-globe"></i> ${news.source}</div>
-                        <div class="news-date"><i class="far fa-calendar-alt"></i> ${news.date}</div>
-                    </div>
-                    <div class="news-summary">${news.summary}</div>
-                    <div class="news-tags">${tagsHTML}</div>
-                `;
-                
-                newsContainer.appendChild(newsItem);
-            });
-        }
-        
-        // Render economic calendar
-        function renderCalendar(calendarItems = calendarData) {
-            debug(`Rendering ${calendarItems.length} calendar items`);
-            
-            const calendarContainer = document.getElementById('calendar-container');
-            calendarContainer.innerHTML = '';
-            
-            if (calendarItems.length === 0) {
-                calendarContainer.innerHTML = '<div class="loading"><i class="fas fa-spinner"></i><div class="loading-text">Tidak ada event yang ditemukan</div></div>';
-                return;
-            }
-            
-            calendarItems.forEach(event => {
-                // Create importance dots
-                let importanceDots = '';
-                const totalDots = 3;
-                let activeDots = 0;
-                
-                if (event.importance === 'low') activeDots = 1;
-                else if (event.importance === 'medium') activeDots = 2;
-                else if (event.importance === 'high') activeDots = 3;
-                
-                for (let i = 0; i < totalDots; i++) {
-                    const isActive = i < activeDots ? 'active' : '';
-                    importanceDots += `<div class="importance-dot ${isActive}"></div>`;
+
+        // Auto play music on load
+        window.onload = function() {
+            setTimeout(async () => {
+                try {
+                    await initMusic();
+                    toggleMusic();
+                } catch (e) {
+                    console.log('Click music button to play');
                 }
-                
-                // Create calendar item HTML
-                const calendarItem = document.createElement('div');
-                calendarItem.className = 'calendar-item';
-                calendarItem.innerHTML = `
-                    <div class="calendar-date">
-                        <div class="calendar-day">${event.day}</div>
-                        <div class="calendar-month">${event.month}</div>
-                    </div>
-                    <div class="calendar-content">
-                        <div class="calendar-title">${event.title}</div>
-                        <div class="calendar-details">
-                            <i class="far fa-clock"></i> ${event.time}
-                            <div class="calendar-importance ${event.importance}-importance">
-                                <span>Impact:</span>
-                                <div class="importance-indicator">
-                                    ${importanceDots}
-                                </div>
-                            </div>
-                        </div>
-                        <div class="calendar-impact">
-                            ${event.impact}
-                        </div>
-                    </div>
-                `;
-                
-                calendarContainer.appendChild(calendarItem);
-            });
+            }, 1000);
+        };
+
+        // Create floating bubbles
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.style.left = Math.random() * 100 + '%';
+            bubble.style.width = Math.random() * 60 + 20 + 'px';
+            bubble.style.height = bubble.style.width;
+            bubble.style.animationDuration = Math.random() * 3 + 5 + 's';
+            bubble.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(bubble);
+            
+            setTimeout(() => bubble.remove(), 8000);
         }
-        
-        // Filter news based on category
-        function filterNews(category) {
-            debug(`Filtering news by: ${category}`);
+
+        // Create hearts
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+            document.body.appendChild(heart);
             
-            if (category === 'all') {
-                renderNews();
-                return;
-            }
-            
-            // Filter by sentiment (good/bad)
-            if (category === 'good' || category === 'bad') {
-                const filteredNews = newsData.filter(news => news.sentiment === category);
-                renderNews(filteredNews);
-                return;
-            }
-            
-            // Filter by category
-            const filteredNews = newsData.filter(news => news.categories.includes(category));
-            renderNews(filteredNews);
+            setTimeout(() => heart.remove(), 8000);
         }
-        
-        // Tab navigation
-        function setupTabs() {
-            debug('Setting up navigation tabs');
+
+        // Create stars
+        function createStar() {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.innerHTML = '✨';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.fontSize = Math.random() * 1.5 + 1 + 'rem';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(star);
             
-            const tabs = document.querySelectorAll('.nav-tab');
-            const contentSections = document.querySelectorAll('.content-section');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Get data-tab attribute
-                    const tabId = tab.getAttribute('data-tab');
-                    
-                    // Remove active class from all tabs and content sections
-                    tabs.forEach(t => t.classList.remove('active'));
-                    contentSections.forEach(section => section.classList.remove('active'));
-                    
-                    // Add active class to clicked tab and corresponding content section
-                    tab.classList.add('active');
-                    document.getElementById(`${tabId}-section`).classList.add('active');
-                    
-                    debug(`Switched to tab: ${tabId}`);
-                });
-            });
+            setTimeout(() => star.remove(), 3000);
         }
-        
-        // Setup filter buttons
-        function setupFilters() {
-            debug('Setting up filter buttons');
+
+        // Show surprise modal
+        function showSurprise() {
+            document.getElementById('modal').classList.add('show');
             
-            const filterButtons = document.querySelectorAll('.filter-button');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    button.classList.add('active');
-                    
-                    // Get filter category and filter news
-                    const filterCategory = button.getAttribute('data-filter');
-                    filterNews(filterCategory);
-                });
-            });
-        }
-        
-        // Update market status with real data from CoinGecko API
-        async function updateMarketStatus() {
-            debug('Updating market status from CoinGecko API');
-            
-            const btcPrice = document.querySelector('.btc-price');
-            const btcChange = document.querySelector('.btc-change');
-            const gaugeLabel = document.querySelector('.gauge-label');
-            
-            try {
-                // Use CoinGecko Pro API with your API key
-                const apiKey = 'CG-YM9RMVFFjVxUcxZMEaVbX9f9';
-                const response = await fetch('https://pro-api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_market_cap=true', {
-                    headers: {
-                        'x-cg-pro-api-key': apiKey
-                    }
-                });
-                
-                if (!response.ok) {
-                    throw new Error(`API Error: ${response.status}`);
-                }
-                
-                const data = await response.json();
-                debug('API response received: ' + JSON.stringify(data));
-                
-                if (data && data.bitcoin) {
-                    const price = data.bitcoin.usd;
-                    const changePercent = data.bitcoin.usd_24h_change;
-                    
-                    // Format price with commas
-                    btcPrice.textContent = `${price.toLocaleString('en-US', {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2
-                    })}`;
-                    
-                    // Set change value and style
-                    const isPositive = changePercent > 0;
-                    const iconClass = isPositive ? 'fa-arrow-up' : 'fa-arrow-down';
-                    const changeClass = isPositive ? 'bullish' : 'bearish';
-                    
-                    btcChange.className = `btc-change ${changeClass}`;
-                    btcChange.innerHTML = `<i class="fas ${iconClass}"></i> ${isPositive ? '+' : ''}${changePercent.toFixed(2)}%`;
-                    
-                    // Set gauge label
-                    let marketSentiment = 'NEUTRAL';
-                    let marketClass = 'neutral';
-                    
-                    if (changePercent > 2) {
-                        marketSentiment = 'BULLISH';
-                        marketClass = 'bullish';
-                    } else if (changePercent < -2) {
-                        marketSentiment = 'BEARISH';
-                        marketClass = 'bearish';
-                    }
-                    
-                    gaugeLabel.textContent = marketSentiment;
-                    gaugeLabel.className = `gauge-label ${marketClass}`;
-                    
-                    debug(`Updated market data: Price=${price}, Change=${changePercent}%, Sentiment=${marketSentiment}`);
-                } else {
-                    debug('Bitcoin data not found in API response');
-                    fallbackMarketUpdate();
-                }
-            } catch (error) {
-                debug(`Error fetching market data: ${error.message}`);
-                // Fallback to static data if API fails
-                fallbackMarketUpdate();
+            // Extra celebration
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    createHeart();
+                    createStar();
+                }, i * 100);
             }
         }
-        
-        // Fallback function for when API fails
-        function fallbackMarketUpdate() {
-            debug('Using fallback market data');
-            
-            const btcPrice = document.querySelector('.btc-price');
-            const btcChange = document.querySelector('.btc-change');
-            const gaugeLabel = document.querySelector('.gauge-label');
-            
-            // Static fallback values
-            const priceValue = 67214.58;
-            const changePercent = 1.24;
-            
-            // Format price with commas
-            btcPrice.textContent = `${priceValue.toLocaleString('en-US', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2
-            })}`;
-            
-            // Set change value and style
-            const isPositive = changePercent > 0;
-            const iconClass = isPositive ? 'fa-arrow-up' : 'fa-arrow-down';
-            const changeClass = isPositive ? 'bullish' : 'bearish';
-            
-            btcChange.className = `btc-change ${changeClass}`;
-            btcChange.innerHTML = `<i class="fas ${iconClass}"></i> ${isPositive ? '+' : ''}${changePercent.toFixed(2)}%`;
-            
-            gaugeLabel.textContent = 'BULLISH';
-            gaugeLabel.className = 'gauge-label bullish';
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('modal').classList.remove('show');
         }
-        
-        // Initialize the application
-        function initApp() {
-            debug('Initializing application');
-            
-            // Create particle effects
-            createParticles();
-            
-            // Render initial content
-            renderNews();
-            renderCalendar();
-            
-            // Setup UI interactions
-            setupTabs();
-            setupFilters();
-            
-            // Update market status from API
-            updateMarketStatus();
-            
-            // Set intervals to periodically update data
-            setInterval(updateMarketStatus, 60000); // Update market data every 60 seconds
-            
-            // Turn on debug panel for testing
-            if (DEBUG) {
-                document.getElementById('debug-panel').style.display = 'block';
-            }
-            
-            debug('Application initialized successfully');
+
+        // Continuous animations
+        setInterval(createBubble, 2000);
+        setInterval(createHeart, 3000);
+        setInterval(createStar, 1500);
+
+        // Initial animation burst
+        for (let i = 0; i < 10; i++) {
+            setTimeout(() => {
+                createBubble();
+                if (i % 2 === 0) createHeart();
+                if (i % 3 === 0) createStar();
+            }, i * 200);
         }
-        
-        // Start the application
-        document.addEventListener('DOMContentLoaded', initApp);
     </script>
 </body>
 </html>
